@@ -1,6 +1,8 @@
 package com.example.fructus;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -44,14 +46,16 @@ public class FruitsRecyclerViewAdapter extends RecyclerView.Adapter<FruitsRecycl
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.txtFruitTitle.setText(fruits.get(position).getTitle());
         holder.txtFruitHeadline.setText(fruits.get(position).getHeadline());
 
         holder.fruitCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, "Fruit card tapped", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(context, FruitActivity.class);
+                intent.putExtra("fruitId", fruits.get(position).getId());
+                context.startActivity(intent);
             }
         });
 

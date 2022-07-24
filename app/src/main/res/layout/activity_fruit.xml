@@ -65,21 +65,36 @@
 
         </RelativeLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="LEARN MORE ABOUT FRUIT"
-            android:id="@+id/tvLearnMore"
-            android:layout_below="@id/rlNutrational"
             android:layout_marginTop="15dp"
-            android:textSize="16sp" />
+            android:id="@+id/rlLearnMore"
+            android:layout_below="@id/rlNutrational">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LEARN MORE ABOUT "
+                android:id="@+id/tvLearnMore"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FRUIT NAME"
+                android:id="@+id/tvFruitName"
+                android:layout_toRightOf="@id/tvLearnMore"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Description"
             android:id="@+id/tvFruitDescription"
-            android:layout_below="@id/tvLearnMore"
+            android:layout_below="@id/rlLearnMore"
             android:textColor="@color/black"
             android:layout_marginTop="15dp"
             android:textSize="15sp" />
