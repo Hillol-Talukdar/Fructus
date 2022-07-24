@@ -4,6 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -66,6 +68,17 @@ public class FruitActivity extends AppCompatActivity {
                         .asBitmap()
                         .load(getImage(fruit.getImage()))
                         .into(ivFruitImage);
+
+
+
+                int[] colors = {Color.parseColor(fruit.getGradientColors().get(0)), Color.parseColor(fruit.getGradientColors().get(1))};
+
+                //create a new gradient color
+                GradientDrawable gd = new GradientDrawable(
+                        GradientDrawable.Orientation.TOP_BOTTOM, colors);
+                gd.setCornerRadius(0f);
+
+                ivFruitImage.setBackground(gd);
             }
         }
 

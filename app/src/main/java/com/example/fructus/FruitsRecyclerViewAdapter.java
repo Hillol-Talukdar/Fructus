@@ -54,13 +54,18 @@ public class FruitsRecyclerViewAdapter extends RecyclerView.Adapter<FruitsRecycl
         holder.txtFruitTitle.setText(fruits.get(position).getTitle());
         holder.txtFruitHeadline.setText(fruits.get(position).getHeadline());
 
-        int[] colors = {Color.parseColor("#008000"),Color.parseColor("#ADFF2F")};
+        ArrayList<String> gradiantColor = fruits.get(position).getGradientColors();
+
+//        int[] colors = {Color.parseColor("#008000"),Color.parseColor("#ADFF2F")};
+        int[] colors = {Color.parseColor(gradiantColor.get(0)),Color.parseColor(gradiantColor.get(1))};
 
 //create a new gradient color
         GradientDrawable gd = new GradientDrawable(
-                GradientDrawable.Orientation.BL_TR, colors);
+                GradientDrawable.Orientation.TOP_BOTTOM, colors);
         gd.setCornerRadius(0f);
-        holder.itemView.setBackground(gd);
+//        holder.itemView.setBackground(gd);
+
+        holder.fruitImage.setBackground(gd);
 
         holder.fruitCard.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -31,16 +31,16 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toEndOf="@id/ivFruitImage"/>
 
-         <TextView
+        <TextView
             android:id="@+id/tvFruitHeadline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-             android:layout_marginStart="16dp"
+            android:layout_marginStart="16dp"
             android:text="Headline"
             android:textSize="15sp"
-             app:layout_constraintTop_toBottomOf="@id/tvFruitTitle"
+            app:layout_constraintBottom_toBottomOf="@id/ivFruitImage"
             app:layout_constraintStart_toEndOf="@id/ivFruitImage"
-             app:layout_constraintBottom_toBottomOf="@id/ivFruitImage"/>
+            app:layout_constraintTop_toBottomOf="@id/tvFruitTitle" />
 
         <ImageView
             android:id="@+id/ivArrowImage"

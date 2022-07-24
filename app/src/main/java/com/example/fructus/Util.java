@@ -44,15 +44,15 @@ public class Util {
                 "Blueberries consist of 14% carbohydrates, 0.7% protein, 0.3% fat and 84% water (table). They contain only negligible amounts of micronutrients, with moderate levels (relative to respective Daily Values) (DV) of the essential dietary mineral manganese, vitamin C, vitamin K and dietary fiber (table).\n" +
                 "Generally, nutrient contents of blueberries are a low percentage of the DV (table). One serving provides a relatively low caloric value of 57 kcal with a glycemic load of 6.\n";
 
-        gradientColors.add("#4F86F7");
-        gradientColors.add("##115bf4");
+        gradientColors.add(0,"#4F86F7");
+        gradientColors.add(1,"#115bf4");
 
-        nutrition.add("240 kJ (57 kcal)");
-        nutrition.add("9.96 g");
-        nutrition.add("0.33 g");
-        nutrition.add("0.74 g");
-        nutrition.add("A, B1, B2, B3, B5, B6, B9, C, E, K");
-        nutrition.add("Calcium, Iron, Magnasium, Manganese, Phosphorus, Sodium, Zinc");
+        nutrition.add(0,"240 kJ (57 kcal)");
+        nutrition.add(1,"9.96 g");
+        nutrition.add(2,"0.33 g");
+        nutrition.add(3,"0.74 g");
+        nutrition.add(4,"A, B1, B2, B3, B5, B6, B9, C, E, K");
+        nutrition.add(5,"Calcium, Iron, Magnasium, Manganese, Phosphorus, Sodium, Zinc");
 
         allFruits.add(new Fruit(id, title, headline, image, description, gradientColors, nutrition));
 
@@ -69,11 +69,18 @@ public class Util {
                 "NUTRITION\n" +
                 "One serving (100 g; see Table) of strawberries contains approximately 33 kilocalories, is an excellent source of vitamin C, a good source of manganese, and provides several other vitamins and dietary minerals in lesser amounts.\n" +
                 "Strawberries contain a modest amount of essential unsaturated fatty acids in the achene (seed) oil.\n";
-//                nutrition: ["136 kJ (33 kcal)","4.89 g","0.3 g","0.67 g","B1, B2, B3, B5, B6, B9, Choline, C, E, K","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc"]
-//                gradientColors: [Color("ColorStrawberryLight"), Color("ColorStrawberryDark")];
 
-        allFruits.add(new Fruit(id, title, headline, image, description));
+        gradientColors.add(0,"#fc5a8d");
+        gradientColors.add(1,"#fb175f ");
 
+        nutrition.add(2,"136 kJ (33 kcal)");
+        nutrition.add(3,"4.89 g");
+        nutrition.add(4,"0.3 g");
+        nutrition.add(5,"0.67 g");
+        nutrition.add(6,"B1, B2, B3, B5, B6, B9, Choline, C, E, K");
+        nutrition.add(7,"Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc");
+
+        allFruits.add(new Fruit(id, title, headline, image, description, gradientColors, nutrition));
 
         id++;
         title = "Lemon";
@@ -98,11 +105,17 @@ public class Util {
                 "LEAVES\n" +
                 "The leaves of the lemon tree are used to make a tea and for preparing cooked meats and seafoods.\n";
 
-//        gradientColors: [Color("ColorLemonLight"), Color("ColorLemonDark")];
-//        nutrition: ["121 kJ (29 kcal)","2.5 g","0.3 g","1.1 g","B1, B2, B3, B5, B6, B9, C, Choline","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Zinc"];
+        gradientColors.add(0,"#FAFA33");
+        gradientColors.add(1,"#3423");
 
-        allFruits.add(new Fruit(id, title, headline, image, description));
+        nutrition.add(0,"121 kJ (29 kcal)");
+        nutrition.add(1,"2.5 g");
+        nutrition.add(2,"0.3 g");
+        nutrition.add(3,"1.1 g");
+        nutrition.add(4,"B1, B2, B3, B5, B6, B9, C, Choline");
+        nutrition.add(5,"Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Zinc");
 
+        allFruits.add(new Fruit(id, title, headline, image, description, gradientColors, nutrition));
 
         id++;
         title = "Plum";
@@ -133,10 +146,18 @@ public class Util {
                 "\n" +
                 "          A large number of plums, of the Damson variety, are also grown in Hungary, where they are called szilva and are used to make lekvar (a plum paste jam), palinka (traditional fruit brandy), plum dumplings, and other foods. In Romania, 80% of the plum production is used to create a similar brandy, called țuică.\n" +
                 "          ";
-//        gradientColors= [Color("ColorPlumLight"), Color("ColorPlumDark")];
-//        nutrition: ["192 kJ (46 kcal)","9.92 g","0.28 g","0.7 g","A, B1, B2, B3, B5, B6, B9, C, E, K","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc"];
 
-        allFruits.add(new Fruit(id, title, headline, image, description));
+        gradientColors.add(0,"#bd557f");
+        gradientColors.add(1,"#52162e");
+
+        nutrition.add(0,"192 kJ (46 kcal)");
+        nutrition.add(1,"9.92 g");
+        nutrition.add(2,"0.28 g");
+        nutrition.add(3,"0.7 g");
+        nutrition.add(4,"A, B1, B2, B3, B5, B6, B9, C, E, K");
+        nutrition.add(5,"Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc");
+
+        allFruits.add(new Fruit(id, title, headline, image, description, gradientColors, nutrition));
 
 
         id++;
@@ -167,11 +188,17 @@ public class Util {
                 "        Lime extracts and lime essential oils are frequently used in perfumes, cleaning products, and aromatherapy.\n" +
                 "        ";
 
-//                gradientColors= [Color("ColorLimeLight"), Color("ColorLimeDark")];
-//                nutrition= ["126 kJ (30 kcal)","1.7 g","0.2 g","0.7 g","B1, B2, B3, B5, B6, B9, C","Calcium, Iron, Magnasium, Phosphorus, Potassium, Sodium"];
+        gradientColors.add(0,"#c8cd77");
+        gradientColors.add(1,"#b5bc48 ");
 
+        nutrition.add(0,"126 kJ (30 kcal)");
+        nutrition.add(1,"1.7 g");
+        nutrition.add(2,"0.2 g");
+        nutrition.add(3,"0.7 g");
+        nutrition.add(4,"B1, B2, B3, B5, B6, B9, C");
+        nutrition.add(5,"Calcium, Iron, Magnasium, Phosphorus, Potassium, Sodium");
 
-        allFruits.add(new Fruit(id, title, headline, image, description));
+        allFruits.add(new Fruit(id, title, headline, image, description, gradientColors, nutrition));
 
 
         id++;
@@ -197,11 +224,17 @@ public class Util {
                 "          Insect pests of the pomegranate can include the pomegranate butterfly Virachola isocrates and the leaf-footed bug Leptoglossus zonatus, and fruit flies and ants are attracted to unharvested ripe fruit. Pomegranate grows easily from seed, but is commonly propagated from 25 to 50 cm (10 to 20 in) hardwood cuttings to avoid the genetic variation of seedlings. Air layering is also an option for propagation, but grafting fails.\n" +
                 "          ";
 
-//        gradientColors= [Color("ColorPomegranateLight"), Color("ColorPomegranateDark")];
-//        nutrition= ["346 kJ (83 kcal)","13.67 g","1.17 g","1.67 g","B1, B2, B3, B5, B6, B9, C, E, K","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc"];
+        gradientColors.add(0,"##EE3233");
+        gradientColors.add(1,"#c21919");
 
-        allFruits.add(new Fruit(id, title, headline, image, description));
+        nutrition.add(0,"346 kJ (83 kcal)");
+        nutrition.add(1,"13.67 g");
+        nutrition.add(2,"1.17 g");
+        nutrition.add(3,"1.67 g");
+        nutrition.add(4,"B1, B2, B3, B5, B6, B9, C, E, K");
+        nutrition.add(5,"Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc");
 
+        allFruits.add(new Fruit(id, title, headline, image, description, gradientColors, nutrition));
 
         id++;
         title = "Pear";
@@ -236,10 +269,18 @@ public class Util {
                 "          The Bradford pear (Pyrus calleryana 'Bradford') in particular has become widespread in North America, and is used only as an ornamental tree, as well as a blight-resistant rootstock for Pyrus communis fruit orchards. The Willow-leaved pear (Pyrus salicifolia) is grown for its attractive, slender, densely silvery-hairy leaves.\n" +
                 "          ";
 
-//                gradientColors= [Color("ColorPearLight"), Color("ColorPearDark")];
-//                nutrition= ["239 kJ (57 kcal)","9.75 g","0.14 g","0.36 g","B1, B2, B3, B5, B6, B9, C, E, K","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc"];
+        gradientColors.add(0,"#eae0c8");
+        gradientColors.add(1,"#d2bd89");
 
-        allFruits.add(new Fruit(id, title, headline, image, description));
+        nutrition.add(0,"240 kJ (57 kcal)");
+        nutrition.add(1,"9.75 g");
+        nutrition.add(2,"0.14 g");
+        nutrition.add(3,"0.36 g");
+        nutrition.add(4,"B1, B2, B3, B5, B6, B9, C, E, K");
+        nutrition.add(5,"Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc");
+
+        allFruits.add(new Fruit(id, title, headline, image, description, gradientColors, nutrition));
+
 
         id++;
         title = "Gooseberry";
@@ -262,11 +303,19 @@ public class Util {
                 "          Gooseberries are edible and can be eaten as-is, or used as an ingredient in desserts, such as pies, fools and crumbles. Early pickings are generally sour and more appropriate for culinary use. They are also used to flavour beverages such as sodas, flavoured waters, or milk, and can be made into fruit wines and teas. Gooseberries can be preserved in the form of jams, dried fruit, or as the primary or a secondary ingredient in pickling, or stored in sugar syrup.\n" +
                 "          ";
 
-//                gradientColors= [Color("ColorGooseberryLight"), Color("ColorGooseberryDark")];
-//                nutrition= ["184 kJ (44 kcal)","6.15","0.58 g","0.88 g","A, B1, B2, B3, B5, B6, B9, C, E","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc"];
 
+        gradientColors.add(0,"#C7A94A");
+        gradientColors.add(1,"#9c812f");
 
-        allFruits.add(new Fruit(id, title, headline, image, description));
+        nutrition.add(0,"184 kJ (44 kcal)");
+        nutrition.add(1,"6.15");
+        nutrition.add(2,"0.58 g");
+        nutrition.add(3,"0.88 g");
+        nutrition.add(4,"A, B1, B2, B3, B5, B6, B9, C, E");
+        nutrition.add(5,"Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc");
+
+        allFruits.add(new Fruit(id, title, headline, image, description, gradientColors, nutrition));
+
 
         id++;
         title = "Mango";
@@ -297,11 +346,18 @@ public class Util {
                 "          Generally, ripe mangoes have an orange-yellow or reddish peel and are juicy for eating, while exported fruit are often picked while underripe with green peels. Although producing ethylene while ripening, unripened exported mangoes do not have the same juiciness or flavor as fresh fruit.\n" +
                 "          ";
 
-//                gradientColors= [Color("ColorMangoLight"), Color("ColorMangoDark")];
-//                nutrition= ["250 kJ (60 kcal)","13.7 g","0.38 g","0.82 g","A, B1, B2, B3, B5, B6, B9, C, E, K","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc"];
+        gradientColors.add(0,"#FFBF34");
+        gradientColors.add(1,"#ba8718");
 
+        nutrition.add(0,"250 kJ (60 kcal)");
+        nutrition.add(1,"13.7 g");
+        nutrition.add(2,"0.38 g");
+        nutrition.add(3,"0.82 g");
+        nutrition.add(4,"A, B1, B2, B3, B5, B6, B9, C, E, K");
+        nutrition.add(5,"Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc");
 
-        allFruits.add(new Fruit(id, title, headline, image, description));
+        allFruits.add(new Fruit(id, title, headline, image, description, gradientColors, nutrition));
+
 
         id++;
         title = "Watermelon";
@@ -335,11 +391,17 @@ public class Util {
                 "          Lack of pollen is thought to contribute to \"hollow heart\" which causes the flesh of the watermelon to devleop a large hole, sometimes in an intricate, symmetric shape. Watermelons suffering from hollow heart are safe to consume.\n" +
                 "          ";
 
-//                gradientColors= [Color("ColorWatermelonLight"), Color("ColorWatermelonDark")];
-//                nutrition= ["127 kJ (30 kcal)","6.2 g","0.15 g","0.61 g","A, B1, B2, B3, B5, B6, C","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc"];
+        gradientColors.add(0,"#E8476A");
+        gradientColors.add(1,"#ba2d4b");
 
+        nutrition.add(0,"127 kJ (30 kcal)");
+        nutrition.add(1,"6.2 g");
+        nutrition.add(2,"0.15 g");
+        nutrition.add(2,"0.61 g");
+        nutrition.add(4,"A, B1, B2, B3, B5, B6, C");
+        nutrition.add(5,"Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc");
 
-        allFruits.add(new Fruit(id, title, headline, image, description));
+        allFruits.add(new Fruit(id, title, headline, image, description, gradientColors, nutrition));
 
 
         id++;
@@ -362,11 +424,18 @@ public class Util {
                 "          A cherry tree will take three to four years once it is planted in the orchard to produce its first crop of fruit, and seven years to attain full maturity.\n" +
                 "          ";
 
-//                gradientColors= [Color("ColorCherryLight"), Color("ColorCherryDark")];
-//                nutrition= ["209 kJ (50 kcal)","8.5 g","0.3 g","1 g","A, B1, B2, B3, B5, B6, B9, C, K","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc"];
+        gradientColors.add(0,"#ffa5a5");
+        gradientColors.add(1,"#ff7c7c");
 
+        nutrition.add(0,"209 kJ (50 kcal)");
+        nutrition.add(1,"8.5 g");
+        nutrition.add(2,"0.3 g");
+        nutrition.add(3,"1 g");
+        nutrition.add(4,"A, B1, B2, B3, B5, B6, B9, C, K");
+        nutrition.add(5,"Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc");
 
-        allFruits.add(new Fruit(id, title, headline, image, description));
+        allFruits.add(new Fruit(id, title, headline, image, description, gradientColors, nutrition));
+
 
         id++;
         title = "Grapefruit";
@@ -391,12 +460,17 @@ public class Util {
                 "          In Costa Rica, especially in Atenas, grapefruit are often cooked to remove their sourness, rendering them as sweets; they are also stuffed with dulce de leche, resulting in a dessert called toronja rellena (stuffed grapefruit). In Haiti, grapefruit is used primarily for its juice (jus de Chadèque), but also is used to make jam (confiture de Chadèque).\n" +
                 "          ";
 
-//        gradientColors= [Color("ColorGrapefruitLight"), Color("ColorGrapefruitDark")];
-//        nutrition= ["138 kJ (33 kcal)","7.31 g","0.10 g","0.8 g","B1, B2, B3, B5, B6, B9, C, E","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Zinc"];
+        gradientColors.add(0,"#edadaa");
+        gradientColors.add(1,"#df6c67");
 
+        nutrition.add(0,"138 kJ (33 kcal)");
+        nutrition.add(1,"7.31 g");
+        nutrition.add(2,"0.10 g");
+        nutrition.add(3,"0.8 g");
+        nutrition.add(4,"B1, B2, B3, B5, B6, B9, C, E");
+        nutrition.add(5,"Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Zinc");
 
-        allFruits.add(new Fruit(id, title, headline, image, description));
-
+        allFruits.add(new Fruit(id, title, headline, image, description, gradientColors, nutrition));
 
         id++;
         title = "Apple";
@@ -419,11 +493,17 @@ public class Util {
                 "          Commercially popular apple cultivars are soft but crisp. Other desirable qualities in modern commercial apple breeding are a colorful skin, absence of russeting, ease of shipping, lengthy storage ability, high yields, disease resistance, common apple shape, and developed flavor. Modern apples are generally sweeter than older cultivars, as popular tastes in apples have varied over time. Most North Americans and Europeans favor sweet, subacid apples, but tart apples have a strong minority following. Extremely sweet apples with barely any acid flavor are popular in Asia, especially the Indian Subcontinent.\n" +
                 "          ";
 
-//        gradientColors= [Color("ColorAppleLight"), Color("ColorAppleDark")];
-//                nutrition= ["218 kJ (52 kcal)","10.39 g","0.17 g","0.26 g","A, B1, B2, B3, B5, B6, B9, C, E, K","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc"];
+        gradientColors.add(0,"#e2f3c0");
+        gradientColors.add(1,"#c0e577");
 
+        nutrition.add(0,"218 kJ (52 kcal)");
+        nutrition.add(1,"10.39 g");
+        nutrition.add(2,"0.17 g");
+        nutrition.add(3,"0.26 g");
+        nutrition.add(4,"A, B1, B2, B3, B5, B6, B9, C, E, K");
+        nutrition.add(5,"Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc");
 
-        allFruits.add(new Fruit(id, title, headline, image, description));
+        allFruits.add(new Fruit(id, title, headline, image, description, gradientColors, nutrition));
 
 
     }
