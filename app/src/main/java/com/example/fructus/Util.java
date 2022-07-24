@@ -44,11 +44,17 @@ public class Util {
                 "Blueberries consist of 14% carbohydrates, 0.7% protein, 0.3% fat and 84% water (table). They contain only negligible amounts of micronutrients, with moderate levels (relative to respective Daily Values) (DV) of the essential dietary mineral manganese, vitamin C, vitamin K and dietary fiber (table).\n" +
                 "Generally, nutrient contents of blueberries are a low percentage of the DV (table). One serving provides a relatively low caloric value of 57 kcal with a glycemic load of 6.\n";
 
+        gradientColors.add("#4F86F7");
+        gradientColors.add("##115bf4");
 
-//                nutrition: ["240 kJ (57 kcal)","9.96 g","0.33 g","0.74 g","A, B1, B2, B3, B5, B6, B9, C, E, K","Calcium, Iron, Magnasium, Manganese, Phosphorus, Sodium, Zinc"]
-        //        gradientColors = [Color("ColorBlueberryLight"), Color("ColorBlueberryDark")];
+        nutrition.add("240 kJ (57 kcal)");
+        nutrition.add("9.96 g");
+        nutrition.add("0.33 g");
+        nutrition.add("0.74 g");
+        nutrition.add("A, B1, B2, B3, B5, B6, B9, C, E, K");
+        nutrition.add("Calcium, Iron, Magnasium, Manganese, Phosphorus, Sodium, Zinc");
 
-        allFruits.add(new Fruit(id, title, headline, image, description));
+        allFruits.add(new Fruit(id, title, headline, image, description, gradientColors, nutrition));
 
         id++;
         title = "Strawberry";

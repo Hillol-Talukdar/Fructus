@@ -3,7 +3,11 @@ package com.example.fructus;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.LinearGradient;
+import android.graphics.Shader;
 import android.graphics.drawable.Drawable;
+import android.graphics.drawable.GradientDrawable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -49,6 +53,14 @@ public class FruitsRecyclerViewAdapter extends RecyclerView.Adapter<FruitsRecycl
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.txtFruitTitle.setText(fruits.get(position).getTitle());
         holder.txtFruitHeadline.setText(fruits.get(position).getHeadline());
+
+        int[] colors = {Color.parseColor("#008000"),Color.parseColor("#ADFF2F")};
+
+//create a new gradient color
+        GradientDrawable gd = new GradientDrawable(
+                GradientDrawable.Orientation.BL_TR, colors);
+        gd.setCornerRadius(0f);
+        holder.itemView.setBackground(gd);
 
         holder.fruitCard.setOnClickListener(new View.OnClickListener() {
             @Override
