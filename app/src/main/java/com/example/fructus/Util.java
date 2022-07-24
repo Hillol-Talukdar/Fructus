@@ -46,6 +46,7 @@ public class Util {
 //                nutrition: ["240 kJ (57 kcal)","9.96 g","0.33 g","0.74 g","A, B1, B2, B3, B5, B6, B9, C, E, K","Calcium, Iron, Magnasium, Manganese, Phosphorus, Sodium, Zinc"]
         //        gradientColors = [Color("ColorBlueberryLight"), Color("ColorBlueberryDark")];
 
+        allFruits.add(new Fruit(id, title, headline, image, description));
 
 
         id++;
@@ -64,7 +65,7 @@ public class Util {
 //                nutrition: ["136 kJ (33 kcal)","4.89 g","0.3 g","0.67 g","B1, B2, B3, B5, B6, B9, Choline, C, E, K","Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc"]
 //                gradientColors: [Color("ColorStrawberryLight"), Color("ColorStrawberryDark")],
 
-
+        allFruits.add(new Fruit(id, title, headline, image, description));
 
     }
 }
