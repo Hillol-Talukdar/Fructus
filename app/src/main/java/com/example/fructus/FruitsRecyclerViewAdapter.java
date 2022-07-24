@@ -84,9 +84,9 @@ public class FruitsRecyclerViewAdapter extends RecyclerView.Adapter<FruitsRecycl
             super(itemVIew);
 
             fruitCard = (CardView) itemVIew.findViewById(R.id.fruitCard); 
-            fruitImage = (ImageView) itemVIew.findViewById(R.id.fruitImage);
-            txtFruitTitle = (TextView) itemVIew.findViewById(R.id.txtFruitTitle);
-            txtFruitHeadline = (TextView) itemVIew.findViewById(R.id.txtFruitHeadline);
+            fruitImage = (ImageView) itemVIew.findViewById(R.id.ivFruitImage);
+            txtFruitTitle = (TextView) itemVIew.findViewById(R.id.tvFruitTitle);
+            txtFruitHeadline = (TextView) itemVIew.findViewById(R.id.tvFruitHeadline);
         }
     }
 
