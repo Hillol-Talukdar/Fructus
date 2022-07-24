@@ -8,10 +8,10 @@ public class Fruit {
     private String headline;
     private String image;
     private String description;
-    private ArrayList gradientColors;
-    private ArrayList nutrition;
+    private ArrayList<String> gradientColors;
+    private ArrayList<String> nutrition;
 
-    public Fruit(int id, String title, String headline, String image, String description, ArrayList gradientColors, ArrayList nutrition) {
+    public Fruit(int id, String title, String headline, String image, String description, ArrayList<String> gradientColors, ArrayList<String> nutrition) {
         this.id = id;
         this.title = title;
         this.headline = headline;
@@ -69,19 +69,19 @@ public class Fruit {
         this.description = description;
     }
 
-    public ArrayList getGradientColors() {
+    public ArrayList<String> getGradientColors() {
         return gradientColors;
     }
 
-    public void setGradientColors(ArrayList gradientColors) {
+    public void setGradientColors(ArrayList<String> gradientColors) {
         this.gradientColors = gradientColors;
     }
 
-    public ArrayList getNutrition() {
+    public ArrayList<String> getNutrition() {
         return nutrition;
     }
 
-    public void setNutrition(ArrayList nutrition) {
+    public void setNutrition(ArrayList<String> nutrition) {
         this.nutrition = nutrition;
     }
 
