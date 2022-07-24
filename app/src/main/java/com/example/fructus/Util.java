@@ -1,9 +1,11 @@
 package com.example.fructus;
 
+import android.util.Log;
+
 import java.util.ArrayList;
 
 public class Util {
-    private ArrayList<Fruit> allFruits;
+    private static ArrayList<Fruit> allFruits;
 
     private static int id = 0;
 

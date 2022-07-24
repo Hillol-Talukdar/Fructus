@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -22,6 +23,8 @@ public class FruitActivity extends AppCompatActivity {
     private TextView tvFruitName;
 
     private ImageView ivFruitImage;
+
+    private Util util;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,13 +49,14 @@ public class FruitActivity extends AppCompatActivity {
 
     private void getBookInformation() {
         Intent intent = getIntent();
-        Util util = new Util();
+        util = new Util();
         ArrayList<Fruit> fruits = util.getAllFruits();
 
         int id = intent.getIntExtra("fruitId", 0);
 
         for(Fruit fruit : fruits) {
             if(fruit.getId() == id) {
+
                 tvFruitTitle.setText(fruit.getTitle());
                 tvFruitHeadline.setText(fruit.getHeadline());
                 tvFruitDescription.setText(fruit.getDescription());

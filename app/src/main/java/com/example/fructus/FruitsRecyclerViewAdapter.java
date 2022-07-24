@@ -28,7 +28,7 @@ public class FruitsRecyclerViewAdapter extends RecyclerView.Adapter<FruitsRecycl
 
     private ArrayList<Fruit> fruits = new ArrayList<>();
     private Context context;
-    Util utils;
+    private Util utils;
 
     public FruitsRecyclerViewAdapter(Context context) {
         this.context = context;
