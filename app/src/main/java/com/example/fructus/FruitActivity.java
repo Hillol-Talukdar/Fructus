@@ -23,6 +23,7 @@ public class FruitActivity extends AppCompatActivity {
     private TextView tvFruitHeadline;
     private TextView tvFruitDescription;
     private TextView tvFruitName;
+    private TextView tvLearnMore;
 
     private ImageView ivFruitImage;
 
@@ -45,6 +46,7 @@ public class FruitActivity extends AppCompatActivity {
         tvFruitHeadline = (TextView) findViewById(R.id.tvFruitHeadline);
         tvFruitDescription = (TextView) findViewById(R.id.tvFruitDescription);
         tvFruitName = (TextView) findViewById(R.id.tvFruitName);
+        tvLearnMore = (TextView) findViewById(R.id.tvLearnMore);
 
         ivFruitImage = (ImageView) findViewById(R.id.ivFruitImage);
     }
@@ -79,6 +81,9 @@ public class FruitActivity extends AppCompatActivity {
                 gd.setCornerRadius(0f);
 
                 ivFruitImage.setBackground(gd);
+                tvFruitTitle.setTextColor(Color.parseColor(fruit.getGradientColors().get(1)));
+                tvFruitName.setTextColor(Color.parseColor(fruit.getGradientColors().get(0)));
+                tvLearnMore.setTextColor(Color.parseColor(fruit.getGradientColors().get(0)));
             }
         }
 

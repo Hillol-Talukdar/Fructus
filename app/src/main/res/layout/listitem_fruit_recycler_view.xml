@@ -19,17 +19,17 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-            <TextView
+        <TextView
             android:id="@+id/tvFruitTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="Title"
+            android:textColor="@color/black"
             android:textSize="26sp"
             android:textStyle="bold"
-            android:textColor="@color/black"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toEndOf="@id/ivFruitImage"/>
+            app:layout_constraintStart_toEndOf="@id/ivFruitImage"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tvFruitHeadline"
