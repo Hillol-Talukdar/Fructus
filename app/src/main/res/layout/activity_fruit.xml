@@ -6,102 +6,116 @@
     android:layout_height="match_parent"
     tools:context=".FruitActivity">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:id="@+id/ivFruitImage"
-        android:src="@mipmap/ic_launcher"/>
-
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/ivFruitImage"
-        android:padding="10dp"
-        android:layout_marginTop="10dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Title"
-            android:id="@+id/tvFruitTitle"
-            android:textStyle="bold"
-            android:textSize="25sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Headline"
-            android:id="@+id/tvFruitHeadline"
-            android:layout_below="@id/tvFruitTitle"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:layout_marginTop="10dp"/>
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-127dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/rlNutrational"
-            android:layout_below="@id/tvFruitHeadline"
-            android:radius="20dp"
-            android:layout_marginTop="20dp"
-            android:padding="15dp"
-            android:background="@color/LightGray">
-
-            <TextView
-                android:id="@+id/tvFruitNutration"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tvFruitTitle"
-                android:text="Nutrational Value per 100g"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
+            android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/ivArrowImage"
-                android:layout_width="20dp"
-                android:layout_height="25dp"
-                android:layout_alignParentEnd="true"
-                android:src="@drawable/ic_arrow_forward"
-                android:layout_alignParentRight="true"/>
+                android:id="@+id/ivFruitImage"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/ivFruitImage"
+                android:layout_marginTop="10dp"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tvFruitTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Title"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvFruitHeadline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvFruitTitle"
+                    android:layout_marginTop="10dp"
+                    android:text="Headline"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/rlNutrational"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvFruitHeadline"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/LightGray"
+                    android:padding="15dp"
+                    android:radius="20dp">
+
+                    <TextView
+                        android:id="@+id/tvFruitNutration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvFruitTitle"
+                        android:text="Nutrational Value per 100g"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/ivArrowImage"
+                        android:layout_width="20dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_arrow_forward" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlLearnMore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rlNutrational"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:id="@+id/tvLearnMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="LEARN MORE ABOUT "
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tvFruitName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/tvLearnMore"
+                        android:text="FRUIT NAME"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvFruitDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rlLearnMore"
+                    android:layout_marginTop="20dp"
+                    android:text="Description"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+
+            </RelativeLayout>
 
         </RelativeLayout>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:id="@+id/rlLearnMore"
-            android:layout_below="@id/rlNutrational">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="LEARN MORE ABOUT "
-                android:id="@+id/tvLearnMore"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/tvFruitName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/tvLearnMore"
-                android:text="FRUIT NAME"
-                android:textSize="16sp" />
-
-        </RelativeLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Description"
-            android:id="@+id/tvFruitDescription"
-            android:layout_below="@id/rlLearnMore"
-            android:textColor="@color/black"
-            android:layout_marginTop="20dp"
-            android:textSize="16sp" />
-
-
-    </RelativeLayout>
+    </ScrollView>
 
 </RelativeLayout>
