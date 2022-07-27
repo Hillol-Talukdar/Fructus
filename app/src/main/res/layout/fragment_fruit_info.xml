@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/llFragmentFruitInfo"
     android:layout_width="match_parent"
@@ -34,5 +35,20 @@
         android:layout_marginTop="20dp"
         android:textSize="16dp"
         android:text="Headline" />
+
+    <TextView
+        android:id="@+id/buttonStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:paddingVertical="4dp"
+        android:paddingHorizontal="12dp"
+        android:drawableRight="@drawable/ic_outline_arrow_circle_right_24"
+        android:textCursorDrawable="@color/white"
+        android:text="Start "
+        android:textColor="@color/white"
+        android:background="@drawable/button_border" />
+
 
 </LinearLayout>

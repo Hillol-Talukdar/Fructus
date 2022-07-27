@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,18 +17,22 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
+import java.util.List;
+
 public class IntroductionViewPageAdapter extends FragmentStateAdapter {
 
     private final ArrayList<Fruit> introductionScreenItems = new ArrayList<>();
 
+
     public IntroductionViewPageAdapter(@NonNull FragmentActivity fragmentActivity) {
         super(fragmentActivity);
     }
-    public void setItem(ArrayList<Fruit> introductionScreenItems) {
+    public void setItem(List<Fruit> introductionScreenItems) {
         this.introductionScreenItems.clear();
         this.introductionScreenItems.addAll(introductionScreenItems);
         notifyDataSetChanged();
     }
+
     @NonNull
     @Override
     public Fragment createFragment(int position) {

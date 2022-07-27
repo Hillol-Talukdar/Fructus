@@ -18,7 +18,6 @@ import com.google.android.material.tabs.TabLayoutMediator;
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
 
-    private Button buttonStart;
     private ViewPager2 introductionScreenViewPager;
     private TabLayout tabIndicator;
 
@@ -33,11 +32,9 @@ public class MainActivity extends AppCompatActivity {
         initWidgets();
         setupViewPager();
         setupTabIndicator();
-        setOnClickListeners();
     }
 
     private void initWidgets() {
-        buttonStart = (Button) findViewById(R.id.buttonStart);
         introductionScreenViewPager = findViewById(R.id.vpFruitViewPager);
         tabIndicator = (TabLayout) findViewById(R.id.tabIndicator);
     }
@@ -47,23 +44,17 @@ public class MainActivity extends AppCompatActivity {
 
         introductionViewPageAdapter = new IntroductionViewPageAdapter(this);
         introductionScreenViewPager.setAdapter(introductionViewPageAdapter);
-        introductionViewPageAdapter.setItem(util.getAllFruits());
+        introductionViewPageAdapter.setItem(util.getAllFruits().subList(0,5));
     }
 
     private void setupTabIndicator() {
         new TabLayoutMediator(tabIndicator, introductionScreenViewPager, (tab, position) -> {
-            tab.setIcon(R.drawable.ic_circle_tab_indicator);
-
+            if(tab.isSelected()){
+                tab.setIcon(R.drawable.ic_circle_tab_selected_indicator);
+            }else{
+                tab.setIcon(R.drawable.ic_circle_tab_indicator);
+            }
         }).attach();
     }
 
-    private void setOnClickListeners() {
-        buttonStart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, AllFruitsActivity.class);
-                startActivity(intent);
-            }
-        });
-    }
 }

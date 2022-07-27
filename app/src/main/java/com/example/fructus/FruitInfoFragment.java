@@ -1,5 +1,6 @@
 package com.example.fructus;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -23,6 +25,7 @@ import java.util.ArrayList;
 public class FruitInfoFragment extends Fragment {
 
     private static final String ARG_PARAM1 = "fruitInfo";
+    private View buttonStart;
     private LinearLayout linearlayout;
     private Fruit fruit;
     private TextView title;
@@ -60,7 +63,8 @@ public class FruitInfoFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        title = view.findViewById(R.id.fruitTitle);
+        buttonStart =  view.findViewById(R.id.buttonStart);
+        title =  view.findViewById(R.id.fruitTitle);
         title.setText(fruit.getTitle());
 
         fruitHeadline = view.findViewById(R.id.fruitHeadline);
@@ -86,6 +90,18 @@ public class FruitInfoFragment extends Fragment {
 //        linearlayout.setBackgroundColor(Color.parseColor(gradiantColor.get(0)));
 
         linearlayout.setBackground(gd);
+
+        setOnClickListeners();
+    }
+
+    private void setOnClickListeners() {
+        buttonStart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity().getApplication(), AllFruitsActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     public int getImage(String imageName) {
