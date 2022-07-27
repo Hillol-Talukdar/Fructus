@@ -1,8 +1,9 @@
 package com.example.fructus;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Fruit {
+public class Fruit implements Serializable {
     private int id;
     private String title;
     private String headline;
