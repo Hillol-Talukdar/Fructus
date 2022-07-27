@@ -19,6 +19,7 @@ import java.util.ArrayList;
 public class IntroductionViewPageAdapter extends FragmentStateAdapter {
 
     private final ArrayList<Fruit> introductionScreenItems = new ArrayList<>();
+
     public IntroductionViewPageAdapter(@NonNull FragmentActivity fragmentActivity) {
         super(fragmentActivity);
     }

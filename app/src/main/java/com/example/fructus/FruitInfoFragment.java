@@ -20,7 +20,9 @@ public class FruitInfoFragment extends Fragment {
     private static final String ARG_PARAM1 = "fruitInfo";
     private Fruit fruit;
     private TextView title;
+    private TextView fruitHeadline;
     private ImageView fruitImage;
+
     public FruitInfoFragment() {
         // Required empty public constructor
     }
@@ -53,6 +55,9 @@ public class FruitInfoFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         title = view.findViewById(R.id.fruitTitle);
         title.setText(fruit.getTitle());
+
+        fruitHeadline = view.findViewById(R.id.fruitHeadline);
+        fruitHeadline.setText(fruit.getHeadline());
 
         fruitImage = view.findViewById(R.id.fruitImage);
 

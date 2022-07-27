@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_gravity="center"
-    tools:context=".FruitInfoFragment">
+    tools:context=".FruitInfoFragment"
+    android:padding="20dp">
 
     <ImageView
         android:id="@+id/fruitImage"
@@ -15,8 +16,20 @@
     <TextView
         android:id="@+id/fruitTitle"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/hello_blank_fragment" />
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:text="Title" />
+
+    <TextView
+        android:id="@+id/fruitHeadline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="16dp"
+        android:text="Headline" />
 
 </LinearLayout>
