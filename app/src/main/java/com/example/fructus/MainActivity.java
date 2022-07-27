@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        setContentView(R.layout.activity_introduction);
 
         initWidgets();
         setupViewPager();
@@ -52,10 +51,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupTabIndicator() {
-//        tabIndicator.setupWithViewPager(introductionScreenViewPager);
         new TabLayoutMediator(tabIndicator, introductionScreenViewPager, (tab, position) -> {
-//            tab.setText("Tab " + (position+1));
             tab.setIcon(R.drawable.ic_circle_tab_indicator);
+
         }).attach();
     }
 

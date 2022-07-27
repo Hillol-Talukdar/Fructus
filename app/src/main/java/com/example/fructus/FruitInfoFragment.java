@@ -1,5 +1,7 @@
 package com.example.fructus;
 
+import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -10,14 +12,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+
+import java.util.ArrayList;
 
 
 public class FruitInfoFragment extends Fragment {
 
     private static final String ARG_PARAM1 = "fruitInfo";
+    private LinearLayout linearlayout;
     private Fruit fruit;
     private TextView title;
     private TextView fruitHeadline;
@@ -53,6 +59,7 @@ public class FruitInfoFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
         title = view.findViewById(R.id.fruitTitle);
         title.setText(fruit.getTitle());
 
@@ -66,6 +73,19 @@ public class FruitInfoFragment extends Fragment {
                 .load(getImage(fruit.getImage()))
                 .into(fruitImage);
 
+        ArrayList<String> gradiantColor = fruit.getGradientColors();
+
+        int[] colors = {Color.parseColor(gradiantColor.get(0)), Color.parseColor(gradiantColor.get(1))};
+
+        GradientDrawable gd = new GradientDrawable(
+                GradientDrawable.Orientation.TOP_BOTTOM, colors);
+        gd.setCornerRadius(0f);
+
+
+        linearlayout = (LinearLayout) view.findViewById(R.id.llFragmentFruitInfo);
+//        linearlayout.setBackgroundColor(Color.parseColor(gradiantColor.get(0)));
+
+        linearlayout.setBackground(gd);
     }
 
     public int getImage(String imageName) {
