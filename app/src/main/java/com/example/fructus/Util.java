@@ -32,7 +32,7 @@ public class Util {
         title = "Blueberry";
         headline = "Blueberries are sweet, nutritious and wildly popular fruit all over the world.";
         image = "blueberry";
-        description = " Blueberries are perennial flowering plants with blue or purple berries. They are classified in the section Cyanococcus within the genus Vaccinium. Vaccinium also includes cranberries, bilberries, huckleberries and Madeira blueberries." + "/n" +
+        description = "Blueberries are perennial flowering plants with blue or purple berries. They are classified in the section Cyanococcus within the genus Vaccinium. Vaccinium also includes cranberries, bilberries, huckleberries and Madeira blueberries." + "/n" +
                 "Commercial blueberries—both wild (lowbush) and cultivated (highbush)—are all native to North America. The highbush varieties were introduced into Europe during the 1930s.\n" +
                 "Blueberries are usually prostrate shrubs that can vary in size from 10 centimeters (3.9 in) to 4 meters (13 ft) in height. In commercial production of blueberries, the species with small, pea-size berries growing on low-level bushes are known as \"lowbush blueberries\" (synonymous with \"wild\"), while the species with larger berries growing on taller cultivated bushes are known as \"highbush blueberries\".\n" +
                 "Canada is the leading producer of lowbush blueberries, while the United States produces some 40% of the world supply of highbush blueberries.\n" +
@@ -56,6 +56,9 @@ public class Util {
 
         allFruits.add(new Fruit(id, title, headline, image, description, gradientColors, nutrition));
 
+        gradientColors = new ArrayList<>();
+        nutrition = new ArrayList<>();
+
         id++;
         title = "Strawberry";
         headline = "Widely appreciated for its characteristic aroma,  red color, juicy texture, and sweetness.";
@@ -71,16 +74,20 @@ public class Util {
                 "Strawberries contain a modest amount of essential unsaturated fatty acids in the achene (seed) oil.\n";
 
         gradientColors.add(0,"#fc5a8d");
-        gradientColors.add(1,"#fb175f ");
+        gradientColors.add(1,"#fb175f");
 
-        nutrition.add(2,"136 kJ (33 kcal)");
-        nutrition.add(3,"4.89 g");
-        nutrition.add(4,"0.3 g");
-        nutrition.add(5,"0.67 g");
-        nutrition.add(6,"B1, B2, B3, B5, B6, B9, Choline, C, E, K");
-        nutrition.add(7,"Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc");
+        nutrition.add(0,"136 kJ (33 kcal)");
+        nutrition.add(1,"4.89 g");
+        nutrition.add(2,"0.3 g");
+        nutrition.add(3,"0.67 g");
+        nutrition.add(4,"B1, B2, B3, B5, B6, B9, Choline, C, E, K");
+        nutrition.add(5,"Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc");
 
         allFruits.add(new Fruit(id, title, headline, image, description, gradientColors, nutrition));
+
+        gradientColors = new ArrayList<>();
+        nutrition = new ArrayList<>();
+
 
         id++;
         title = "Lemon";
@@ -106,7 +113,7 @@ public class Util {
                 "The leaves of the lemon tree are used to make a tea and for preparing cooked meats and seafoods.\n";
 
         gradientColors.add(0,"#FAFA33");
-        gradientColors.add(1,"#3423");
+        gradientColors.add(1,"#b5b526");
 
         nutrition.add(0,"121 kJ (29 kcal)");
         nutrition.add(1,"2.5 g");
@@ -117,6 +124,8 @@ public class Util {
 
         allFruits.add(new Fruit(id, title, headline, image, description, gradientColors, nutrition));
 
+        gradientColors = new ArrayList<>();
+        nutrition = new ArrayList<>();
         id++;
         title = "Plum";
         headline = "Plums are a very nutritious fruit. An excellent source of vitamins, minerals, fiber and antioxidants.";
@@ -159,6 +168,9 @@ public class Util {
 
         allFruits.add(new Fruit(id, title, headline, image, description, gradientColors, nutrition));
 
+        gradientColors = new ArrayList<>();
+        nutrition = new ArrayList<>();
+
 
         id++;
         title = "Lime";
@@ -189,7 +201,7 @@ public class Util {
                 "        ";
 
         gradientColors.add(0,"#c8cd77");
-        gradientColors.add(1,"#b5bc48 ");
+        gradientColors.add(1,"#b5bc48");
 
         nutrition.add(0,"126 kJ (30 kcal)");
         nutrition.add(1,"1.7 g");
@@ -199,6 +211,9 @@ public class Util {
         nutrition.add(5,"Calcium, Iron, Magnasium, Phosphorus, Potassium, Sodium");
 
         allFruits.add(new Fruit(id, title, headline, image, description, gradientColors, nutrition));
+
+        gradientColors = new ArrayList<>();
+        nutrition = new ArrayList<>();
 
 
         id++;
@@ -224,7 +239,7 @@ public class Util {
                 "          Insect pests of the pomegranate can include the pomegranate butterfly Virachola isocrates and the leaf-footed bug Leptoglossus zonatus, and fruit flies and ants are attracted to unharvested ripe fruit. Pomegranate grows easily from seed, but is commonly propagated from 25 to 50 cm (10 to 20 in) hardwood cuttings to avoid the genetic variation of seedlings. Air layering is also an option for propagation, but grafting fails.\n" +
                 "          ";
 
-        gradientColors.add(0,"##EE3233");
+        gradientColors.add(0,"#EE3233");
         gradientColors.add(1,"#c21919");
 
         nutrition.add(0,"346 kJ (83 kcal)");
@@ -235,6 +250,9 @@ public class Util {
         nutrition.add(5,"Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Sodium, Zinc");
 
         allFruits.add(new Fruit(id, title, headline, image, description, gradientColors, nutrition));
+
+        gradientColors = new ArrayList<>();
+        nutrition = new ArrayList<>();
 
         id++;
         title = "Pear";
@@ -281,6 +299,9 @@ public class Util {
 
         allFruits.add(new Fruit(id, title, headline, image, description, gradientColors, nutrition));
 
+        gradientColors = new ArrayList<>();
+        nutrition = new ArrayList<>();
+
 
         id++;
         title = "Gooseberry";
@@ -316,6 +337,8 @@ public class Util {
 
         allFruits.add(new Fruit(id, title, headline, image, description, gradientColors, nutrition));
 
+        gradientColors = new ArrayList<>();
+        nutrition = new ArrayList<>();
 
         id++;
         title = "Mango";
@@ -358,6 +381,8 @@ public class Util {
 
         allFruits.add(new Fruit(id, title, headline, image, description, gradientColors, nutrition));
 
+        gradientColors = new ArrayList<>();
+        nutrition = new ArrayList<>();
 
         id++;
         title = "Watermelon";
@@ -403,6 +428,8 @@ public class Util {
 
         allFruits.add(new Fruit(id, title, headline, image, description, gradientColors, nutrition));
 
+        gradientColors = new ArrayList<>();
+        nutrition = new ArrayList<>();
 
         id++;
         title = "Cherry";
@@ -436,6 +463,8 @@ public class Util {
 
         allFruits.add(new Fruit(id, title, headline, image, description, gradientColors, nutrition));
 
+        gradientColors = new ArrayList<>();
+        nutrition = new ArrayList<>();
 
         id++;
         title = "Grapefruit";
@@ -471,6 +500,9 @@ public class Util {
         nutrition.add(5,"Calcium, Iron, Magnasium, Manganese, Phosphorus, Potassium, Zinc");
 
         allFruits.add(new Fruit(id, title, headline, image, description, gradientColors, nutrition));
+
+        gradientColors = new ArrayList<>();
+        nutrition = new ArrayList<>();
 
         id++;
         title = "Apple";
