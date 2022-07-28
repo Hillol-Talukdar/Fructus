@@ -7,9 +7,40 @@
     tools:context=".AllFruitsActivity"
     android:background="#F2F2F7">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rlCustomActionBar">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_filter"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/filterIcon" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fruits"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/filterIcon"/>
+
+    </RelativeLayout>
+
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fruitRecycleView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/fruitRecycleView" />
+        android:layout_below="@id/rlCustomActionBar"
+        android:layout_marginTop="10dp"/>
 
 </RelativeLayout>
