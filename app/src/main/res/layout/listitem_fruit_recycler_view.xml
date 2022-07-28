@@ -10,17 +10,58 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:id="@+id/clbinder"
+        android:paddingVertical="5dp"
+        android:paddingHorizontal="20dp">
 
-        <ImageView
-            android:id="@+id/ivFruitImage"
-            android:layout_width="100dp"
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/design_default_color_secondary_variant"
-            android:src="@mipmap/ic_launcher"
+            android:id="@+id/cvFruitImage"
+            app:cardCornerRadius="12dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="@id/tvFruitHeadline"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvFruitTitle">
+
+            <ImageView
+                android:id="@+id/ivFruitImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@color/design_default_color_secondary_variant"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintStart_toStartOf="@id/cvFruitImage"
+                app:layout_constraintTop_toTopOf="@id/cvFruitImage"
+                app:layout_constraintBottom_toBottomOf="@id/cvFruitImage"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:id="@+id/viewBorder2"
+            android:background="@color/LightGray"
+            app:layout_constraintStart_toEndOf="@+id/viewBorder"
+            app:layout_constraintEnd_toEndOf="@id/ivArrowImage"
+            app:layout_constraintTop_toBottomOf="@id/cvFruitImage"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="8dp">
+
+        </View>
+
+        <View
+            android:layout_width="80dp"
+            android:layout_height="1dp"
+            android:id="@+id/viewBorder"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="@+id/cvFruitImage"
+            app:layout_constraintEnd_toStartOf="@id/viewBorder2"
+            app:layout_constraintTop_toBottomOf="@id/cvFruitImage"
+            android:layout_marginTop="8dp">
+
+        </View>
 
         <TextView
             android:id="@+id/tvFruitTitle"
@@ -32,9 +73,8 @@
             android:textSize="26sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/ivArrowImage"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@id/ivFruitImage"
-            app:layout_constraintTop_toTopOf="@id/ivFruitImage" />
+            app:layout_constraintStart_toEndOf="@id/cvFruitImage"
+            app:layout_constraintTop_toTopOf="@id/cvFruitImage" />
 
         <TextView
             android:id="@+id/tvFruitHeadline"
@@ -44,10 +84,9 @@
             android:text="Headline"
             android:textSize="12sp"
             android:layout_marginTop="5dp"
-            app:layout_constraintBottom_toBottomOf="@id/ivFruitImage"
+            app:layout_constraintBottom_toBottomOf="@id/cvFruitImage"
             app:layout_constraintEnd_toStartOf="@+id/ivArrowImage"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@id/ivFruitImage"
+            app:layout_constraintStart_toEndOf="@id/cvFruitImage"
             app:layout_constraintTop_toBottomOf="@id/tvFruitTitle" />
 
         <ImageView

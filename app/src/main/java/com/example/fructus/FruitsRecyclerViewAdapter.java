@@ -85,6 +85,7 @@ public class FruitsRecyclerViewAdapter extends RecyclerView.Adapter<FruitsRecycl
     }
 
     public int getImage(String imageName) {
+        Log.d(TAG, "getImage: " + imageName);
         int drawableResourceId = context.getResources().getIdentifier(imageName, "drawable", context.getPackageName());
         return drawableResourceId;
     }

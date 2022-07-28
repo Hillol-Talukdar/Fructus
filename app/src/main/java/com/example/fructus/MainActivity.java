@@ -49,11 +49,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupTabIndicator() {
         new TabLayoutMediator(tabIndicator, introductionScreenViewPager, (tab, position) -> {
-            if(tab.isSelected()){
-                tab.setIcon(R.drawable.ic_circle_tab_selected_indicator);
-            }else{
-                tab.setIcon(R.drawable.ic_circle_tab_indicator);
-            }
+            tab.setIcon(R.drawable.ic_tab_icon);
+
         }).attach();
     }
 
