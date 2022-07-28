@@ -10,6 +10,7 @@ import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -20,6 +21,7 @@ import java.util.ArrayList;
 public class FruitActivity extends AppCompatActivity {
     private static final String TAG = "FruitActivity";
 
+    private TextView tvButtonBack;
     private TextView tvFruitTitle;
     private TextView tvFruitHeadline;
     private TextView tvFruitDescription;
@@ -35,14 +37,14 @@ public class FruitActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fruit);
 
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         initWidgets();
+        setListeners();
 
         getBookInformation();
     }
 
     private void initWidgets() {
+        tvButtonBack = (TextView) findViewById(R.id.tvButtonBack);
         tvFruitTitle = (TextView) findViewById(R.id.tvFruitTitle);
         tvFruitHeadline = (TextView) findViewById(R.id.tvFruitHeadline);
         tvFruitDescription = (TextView) findViewById(R.id.tvFruitDescription);
@@ -50,6 +52,15 @@ public class FruitActivity extends AppCompatActivity {
         tvLearnMore = (TextView) findViewById(R.id.tvLearnMore);
 
         ivFruitImage = (ImageView) findViewById(R.id.ivFruitImage);
+    }
+
+    private void setListeners () {
+        tvButtonBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
     }
 
     private void getBookInformation() {
@@ -82,6 +93,7 @@ public class FruitActivity extends AppCompatActivity {
                 gd.setCornerRadius(0f);
 
                 ivFruitImage.setBackground(gd);
+                tvButtonBack.setBackgroundColor(Color.parseColor(fruit.getGradientColors().get(0)));
                 tvFruitTitle.setTextColor(Color.parseColor(fruit.getGradientColors().get(1)));
                 tvFruitName.setTextColor(Color.parseColor(fruit.getGradientColors().get(0)));
                 tvLearnMore.setTextColor(Color.parseColor(fruit.getGradientColors().get(0)));
@@ -93,18 +105,6 @@ public class FruitActivity extends AppCompatActivity {
     public int getImage(String imageName) {
         int drawableResourceId = this.getResources().getIdentifier(imageName, "drawable", this.getPackageName());
         return drawableResourceId;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                super.onBackPressed();
-                break;
-            default:
-                break;
-        }
-        return super.onOptionsItemSelected(item);
     }
 
     @Override
